@@ -1,0 +1,52 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #000000, #121212); /* Darker background */
+    color: #ffffff; /* White text for contrast */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.about-box {
+    background: rgba(0, 0, 0, 0.85); /* Darker box background */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3); /* Light shadow for contrast */
+    max-width: 600px;
+    width: 90%;
+    text-align: left;
+}
+
+.about-box h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff; /* White title */
+    text-align: center;
+}
+
+.about-box p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #d3d3d3; /* Lighter text color for readability */
+}
+
+.about-box button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #444444, #555555); /* Darker gradient */
+    border: none;
+    border-radius: 12px;
+    color: #ffffff; /* White text for button */
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.about-box button:hover {
+    background: linear-gradient(90deg, #555555, #444444); /* Darker hover effect */
+}

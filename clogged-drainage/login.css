@@ -1,0 +1,155 @@
+/* ========================================================= */
+/* General Reset */
+/* ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========================================================= */
+/* Body Styling */
+/* ========================================================= */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: url('images/water-logo.jpg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #000010;
+    color: #00f7ff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ========================================================= */
+/* Login Box Styling - Neon Blue Glow */
+/* ========================================================= */
+.login-box {
+    background: rgba(0, 0, 20, 0.8);
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #00f7ff, 0 0 40px #0088ff;
+    max-width: 450px;
+    width: 100%;
+    animation: fadeIn 1s ease;
+}
+
+/* ========================================================= */
+/* Title Styling - Neon Glow Title */
+/* ========================================================= */
+.login-box h1 {
+    color: #00f7ff;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px #00f7ff, 0 0 20px #00bfff, 0 0 30px #0099cc;
+    animation: pulseNeon 2s infinite alternate;
+}
+
+@keyframes pulseNeon {
+    from { text-shadow: 0 0 10px #00bfff, 0 0 20px #00f7ff; }
+    to { text-shadow: 0 0 20px #00f7ff, 0 0 40px #00e5ff; }
+}
+
+/* ========================================================= */
+/* Label Styling */
+/* ========================================================= */
+.login-box label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #a0eaff;
+    text-shadow: 0 0 6px #00cfff;
+}
+
+/* ========================================================= */
+/* Input Fields Styling */
+/* ========================================================= */
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #00bfff;
+    border-radius: 10px;
+    background-color: #001f2f;
+    color: #ffffff;
+    font-size: 1rem;
+    box-shadow: 0 0 10px #00cfff;
+    transition: all 0.3s ease;
+}
+
+.login-box input:focus {
+    background-color: #002a3a;
+    border-color: #00f7ff;
+    outline: none;
+    box-shadow: 0 0 15px #00f7ff;
+}
+
+/* ========================================================= */
+/* Button Styling */
+/* ========================================================= */
+.login-box button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(90deg, #005f7f, #00f7ff);
+    border: none;
+    border-radius: 12px;
+    color: #001020;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px #00f7ff, 0 0 25px #00bfff;
+    transition: all 0.3s ease;
+}
+
+.login-box button:hover {
+    background: linear-gradient(90deg, #00f7ff, #005f7f);
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #00f7ff, 0 0 40px #00dfff;
+}
+
+/* ========================================================= */
+/* Error Message Styling */
+/* ========================================================= */
+#error-msg {
+    color: #ff3c3c;
+    font-size: 14px;
+    margin-top: 10px;
+    text-shadow: 0 0 5px #ff0000;
+}
+
+/* ========================================================= */
+/* Sign Up and About Us Links */
+/* ========================================================= */
+.signup-link,
+.aboutus-link {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #00eaff;
+    text-shadow: 0 0 5px #00bfff;
+}
+
+.signup-link a,
+.aboutus-link a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.signup-link a:hover,
+.aboutus-link a:hover {
+    color: #00f7ff;
+    text-decoration: underline;
+}
+
+/* ========================================================= */
+/* Animation for Fade In */
+/* ========================================================= */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

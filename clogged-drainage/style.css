@@ -1,0 +1,230 @@
+/* ========================================================= */
+/* General Reset */
+/* ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========================================================= */
+/* Body Styling */
+/* ========================================================= */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: url('images/water-logo.jpg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #000010; /* very dark navy */
+    color: #00f7ff; /* neon blue */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+
+/* ========================================================= */
+/* White Background Section Styling (Top 2cm) */
+/* ========================================================= */
+.white-background {
+    background-color: transparent;  /* still transparent */
+    width: 100%;
+    height: 2cm;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+    gap: 10px;
+}
+
+/* ========================================================= */
+/* Button Styling for About Us and Contact Us */
+/* ========================================================= */
+.white-background .about-us-button,
+.white-background .contact-us-button {
+    background: linear-gradient(90deg, #005f7f, #00f7ff); /* neon gradient */
+    color: #001020; /* very dark navy text */
+    border: none;
+    height: 32px;
+    width: 100px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px #00f7ff, 0 0 25px #00bfff;
+}
+
+.white-background .about-us-button:hover,
+.white-background .contact-us-button:hover {
+    background: linear-gradient(90deg, #00f7ff, #005f7f);
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #00f7ff, 0 0 40px #00dfff;
+}
+
+/* ========================================================= */
+/* Header Text Styling for Top Left Corner */
+/* ========================================================= */
+.header-text {
+    position: absolute;
+    top: 0.6cm;
+    left: 10px;
+    font-size: 1.5rem;
+    color: #00f7ff; /* neon blue */
+    font-weight: bold;
+    text-shadow: 0 0 6px #00cfff;
+    z-index: 10;
+}
+
+/* ========================================================= */
+/* Header Styling */
+/* ========================================================= */
+h1 {
+    color: #00f7ff; /* neon blue */
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #00f7ff, 0 0 20px #00bfff, 0 0 30px #0099cc;
+    animation: pulseNeon 2s infinite alternate;
+}
+
+@keyframes pulseNeon {
+    from { text-shadow: 0 0 10px #00bfff, 0 0 20px #00f7ff; }
+    to { text-shadow: 0 0 20px #00f7ff, 0 0 40px #00e5ff; }
+}
+
+/* ========================================================= */
+/* Paragraph Styling */
+/* ========================================================= */
+p {
+    font-size: 1.2rem;
+    color: #00aaff; /* softer neon blue */
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px #0099cc;
+}
+
+/* ========================================================= */
+/* Form Styling - Neon Dark Background */
+/* ========================================================= */
+form {
+    background: rgba(0, 0, 20, 0.8); /* dark translucent navy */
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #00f7ff, 0 0 40px #0088ff;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    animation: fadeIn 1s ease;
+    margin: 0 auto;
+}
+
+/* ========================================================= */
+/* Select Dropdown Styling - Neon Dark Background and Text */
+/* ========================================================= */
+select {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    background-color: #001f2f; /* dark blue */
+    border: 2px solid #00bfff; /* bright blue border */
+    color: #00f7ff; /* neon blue text */
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 0 10px #00cfff;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+select:hover,
+select:focus {
+    background-color: #002a3a;
+    border-color: #00f7ff;
+    box-shadow: 0 0 15px #00f7ff;
+    outline: none;
+}
+
+/* ========================================================= */
+/* Button Styling - Neon Blue Gradient */
+/* ========================================================= */
+button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(90deg, #005f7f, #00f7ff);
+    border: none;
+    border-radius: 12px;
+    color: #001020; /* dark navy text */
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px #00f7ff, 0 0 25px #00bfff;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #00f7ff, #005f7f);
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #00f7ff, 0 0 40px #00dfff;
+}
+
+/* ========================================================= */
+/* User Details (Initially Hidden) */
+/* ========================================================= */
+.user-details {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 20, 0.8); /* dark navy translucent */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00f7ff;
+    color: #00f7ff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show user details with animation */
+.user-details.show {
+    opacity: 1;
+    display: block;
+}
+
+/* ========================================================= */
+/* Responsive Styling for Small Screens */
+/* ========================================================= */
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2rem;
+    }
+    form {
+        padding: 30px 20px;
+    }
+}
+
+/* ========================================================= */
+/* Change the color of the 'Live Graph from ThingSpeak' text to neon grey-blue */
+.live-reading {
+    color: #6699cc;
+    text-shadow: 0 0 5px #336699;
+}
+
+/* ========================================================= */
+/* Animation for Fade In */
+/* ========================================================= */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

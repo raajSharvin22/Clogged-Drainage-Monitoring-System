@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select LANE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- White Background Section with Buttons -->
+    <div class="white-background">
+        <button class="about-us-button" onclick="window.location.href='aboutus.html?from=selectLane'">About Us</button>
+        <button class="contact-us-button" onclick="window.location.href='contactus.html?from=selectLane'">Contact Us</button>
+    </div>
+
+    <!-- Header Text at the Top-Left Corner -->
+    <div class="header-text">Clogged Drainage Monitoring System</div>
+
+    <div class="container">
+        <h1>CLOGGED DRAINAGE MONITORING SYSTEM</h1>
+        <p>Please select a LANE for the selected TAMAN:</p>
+
+        <!-- Form for LANE Selection -->
+        <form id="laneForm">
+            <select id="laneSelect" required>
+                <option value="LORONG 8">LORONG 8</option>
+                <option value="LORONG 9">LORONG 9</option>
+                <option value="LORONG 10">LORONG 10</option>
+                <option value="LORONG 11">LORONG 11</option>
+            </select>
+            <button type="submit">Next</button>
+        </form>
+    </div>
+
+    <script src="selectLane.js"></script>
+</body>
+</html>

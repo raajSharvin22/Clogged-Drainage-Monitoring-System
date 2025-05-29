@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOGGED DRAINAGE MONITORING SYSTEM</title>
+    <link rel="stylesheet" href="dashboard.css"> <!-- Updated CSS file link -->
+</head>
+
+<body>
+
+    <!-- Header Text (Centered) -->
+    <div class="header-text">
+        <h1>CLOGGED DRAINAGE MONITORING SYSTEM</h1>
+    </div>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-content">
+
+        <!-- Water Level Section -->
+        <div class="water-level">
+            <p>Current Water Level Reading</p>
+            <div id="sensorReading" class="live-reading">
+                📏 Sensor Distance: -- cm<br>
+                💧 Water Level: -- cm
+            </div>
+            <div id="warningMessage" class="warning" style="display: none;">
+                ⚠️ Warning: High Water Level!
+            </div>
+            <div id="severeAlert" class="severe-alert" style="display: none;">
+                🚨 CLOGGED DRAINAGE IN SEVERE NEED ACTION!
+            </div>
+        </div>
+
+        <!-- Live ThingSpeak Graph Section -->
+        <div class="graph-section">
+            <h2>Live Water Level Graph</h2>
+            <iframe 
+                width="450" 
+                height="260" 
+                style="border: 1px solid #cccccc;" 
+                src="https://thingspeak.com/channels/2855916/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line">
+            </iframe>
+        </div>
+
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

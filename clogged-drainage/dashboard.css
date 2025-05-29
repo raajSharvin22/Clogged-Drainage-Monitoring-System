@@ -1,0 +1,219 @@
+/* ========================================================= */
+/* General Reset for consistency across browsers */
+/* ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========================================================= */
+/* Body Styling - Full-page Layout and Background */
+/* ========================================================= */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: url('images/water-logo.jpg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #000010; /* dark navy */
+    color: #00f7ff; /* neon blue */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ========================================================= */
+/* Header Text Styling (Centered) */
+/* ========================================================= */
+.header-text {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    color: #001020; /* dark navy text */
+}
+
+h1 {
+    font-size: 3rem;
+    color: #00f7ff; /* neon cyan base color */
+    text-shadow:
+        0 0 5px #00bfff,
+        0 0 15px #00f7ff,
+        0 0 30px #00cfff,
+        0 0 40px #00e5ff;
+    animation: pulse 2s infinite alternate;
+    margin-bottom: 20px;
+}
+
+/* Animation for H1 */
+@keyframes pulse {
+    from {
+        text-shadow:
+            0 0 10px #00bfff,
+            0 0 20px #00f7ff;
+    }
+    to {
+        text-shadow:
+            0 0 20px #00f7ff,
+            0 0 40px #00e5ff;
+    }
+}
+
+/* ========================================================= */
+/* Main Content Wrapper for Alignment */
+/* ========================================================= */
+.main-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ========================================================= */
+/* Water Level Section Styling */
+/* ========================================================= */
+.water-level {
+    margin-top: 30px;
+    background: rgba(0, 0, 20, 0.8); /* dark navy */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow:
+        0 0 15px #00cfff,
+        0 0 25px #00bfff;
+    width: 80%;
+}
+
+.water-level p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #00f7ff; /* neon blue */
+    text-shadow:
+        0 0 5px #00bfff;
+}
+
+.live-reading {
+    color: #00cfff; /* neon blue */
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Warning Message Styling */
+#warningMessage {
+    color: #00f7ff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    display: none;
+    text-shadow:
+        0 0 8px #00f7ff,
+        0 0 20px #00bfff;
+}
+
+/* ========================================================= */
+/* Severe Alert Styling (Improved) */
+/* ========================================================= */
+.severe-alert {
+    color: #00f7ff !important; /* neon blue */
+    background-color: rgba(0, 0, 20, 0.9);
+    border: 2px solid #00f7ff;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    animation: blink 1s infinite;
+    text-shadow:
+        0 0 15px #00f7ff,
+        0 0 30px #00bfff;
+}
+
+/* Blinking Animation */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+/* ========================================================= */
+/* Graph Section Styling (ThingSpeak Graph) */
+/* ========================================================= */
+.graph-section {
+    margin-top: 50px;
+    width: 80%;
+}
+
+.graph-section h2 {
+    color: #001020; /* dark navy text */
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow:
+        0 0 8px #00f7ff,
+        0 0 15px #00bfff;
+}
+
+/* ========================================================= */
+/* Button Styling with Neon Blue Gradient and Glow */
+/* ========================================================= */
+button {
+    padding: 14px 30px;
+    background: linear-gradient(90deg, #00bfff, #00f7ff);
+    border: none;
+    border-radius: 12px;
+    color: #001020; /* dark navy text */
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow:
+        0 0 15px #00f7ff,
+        0 0 30px #00bfff;
+    transition: all 0.3s ease;
+    text-shadow:
+        0 0 5px #00bfff,
+        0 0 10px #00f7ff;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #00f7ff, #00bfff);
+    transform: scale(1.05);
+    box-shadow:
+        0 0 30px #00f7ff,
+        0 0 50px #00cfff;
+}
+
+/* ========================================================= */
+/* Responsive Design for Smaller Screens */
+/* ========================================================= */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .water-level {
+        width: 90%;
+    }
+
+    .graph-section {
+        width: 90%;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .water-level p,
+    .live-reading {
+        font-size: 1rem;
+    }
+
+    .graph-section h2 {
+        font-size: 1.5rem;
+    }
+}
